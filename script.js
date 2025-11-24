@@ -215,14 +215,7 @@ function downloadImage() {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    
-    // แสดงคำแนะนำเพิ่มเติมสำหรับมือถือ (ถ้าดาวน์โหลดไม่ได้)
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-        setTimeout(() => {
-            alert("💡 หากดาวน์โหลดไม่ได้ ให้กดค้างที่รูปภาพแล้วเลือก 'บันทึกรูปภาพ'");
-        }, 500);
-    }
+
 }
 
 document.getElementById("generateBtn").addEventListener("click", generateImage);
