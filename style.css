@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(to bottom right, #fce4ec, #f3e5f5);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.card {
+    background: white;
+    overflow: hidden;
+}
+
+.header {
+    background-image: url('Pic/banner.png'); 
+    background-size: cover;        
+    background-position: center;   
+    width: 100%;
+    height: 200px;                 
+}
+
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.content {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.label-jp {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.input-field,
+.textarea-field {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+    outline: none;
+    border-color: #ec407a;
+    box-shadow: 0 0 0 3px rgba(236, 64, 122, 0.1);
+}
+
+.textarea-field {
+    resize: vertical;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.image-upload {
+    position: relative;
+    height: 160px;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.image-upload:hover {
+    border-color: #ec407a;
+    background-color: #fce4ec;
+}
+
+.upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.file-input {
+    display: none;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.remove-btn:hover {
+    background: #dc2626;
+}
+
+.btn-generate {
+    width: 100%;
+    background: #f65db7;
+    color: white;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-generate:hover {
+    background: linear-gradient(to right, #d81b60, #8e24aa);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(236, 64, 122, 0.3);
+}
+
+.result-preview {
+    background: #f3f4f6;
+    margin-bottom: 20px;
+}
+
+.generated-image {
+    width: 100%;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 ปุ่มเท่า ๆ กัน */
+    gap: 15px;
+}
+
+.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #10b981;
+    color: white;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-download:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+    .mobile-hint {
+        text-align: center;
+        color: #6b7280;
+        font-size: 14px;
+        margin: 10px 0;
+        padding: 8px;
+        background: #f3f4f6;
+        border-radius: 6px;
+    }
+
+    @media (min-width: 768px) {
+        .mobile-hint {
+            display: none;
+        }
+    }
+
+.btn-new {
+    background: #6b7280;
+    color: white;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-new:hover {
+    background: #4b5563;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(107, 114, 128, 0.3);
+}
+
+.btn-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* ถ้ามีไอคอนในอนาคต */
+    background: #6b7280;
+    color: white;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-share:hover {
+    background: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
