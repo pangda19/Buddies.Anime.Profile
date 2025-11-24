@@ -171,7 +171,7 @@ async function generateImage() {
         wrapTextCenter(ctx, formData.member, 743, 1103, 353, 30, 240);
 
         ctx.font = "bold 36px Noto Sans JP, Arial, sans-serif";
-        wrapTextCenter(ctx, formData.songs, 89, 1520, 1000, 42, 100);
+        wrapTextCenter(ctx, formData.songs, 89, 1516, 1000, 42, 100);
 
         // --------------------
         // DRAW UPLOADED IMAGES
