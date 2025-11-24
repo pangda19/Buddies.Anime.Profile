@@ -201,7 +201,7 @@ async function generateImage() {
 
     } catch (error) {
         console.error("Error generating image:", error);
-        alert("เกิดข้อผิดพลาดในการสร้างภาพ กรุณาลองใหม่อีกครั้ง");
+        alert("An error occurred while generating the image. Please try again.");
     }
 }
 
